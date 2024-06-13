@@ -1,0 +1,1 @@
+this simulates an endpoint with content that changes dynamically with the identity requesting it

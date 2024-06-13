@@ -1,0 +1,13 @@
+<script>
+    // when the DOM loads, register service worker
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register("/service-worker-1.js?v=1.0.0", {scope: '/'})
+            .then(() => console.log('registered succesfully'))
+            .then(() => {
+                fetch("/some-authenticated-endpoint.txt")
+            })
+            .catch((error) => console.log(error))
+    });
+</script>
+
+create fetch() requests in the dev console.
