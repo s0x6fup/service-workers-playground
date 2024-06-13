@@ -1,0 +1,8 @@
+<script>
+    // when the DOM loads, register service worker
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register("./sw.js", {scope: '/'})
+            .then(() => console.log('registered succesfully'))
+            .catch((error) => console.log(error))
+    });
+</script>
